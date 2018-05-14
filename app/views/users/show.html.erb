@@ -1,1 +1,11 @@
 <p><%=@user.name%></p>
+<div class="col-md-8">
+  <% if @user.projects.any? %>
+    <h3> Currently working on (<%= @user.projects.count %>) projects </h3>
+    <ul class="microposts">
+      <%= render @projects %>
+    </ul>
+  <% else %>
+    <h3> Currently not working on any projects </h3>
+  <% end %>
+</div>
