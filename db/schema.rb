@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20180507180445) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.integer "users_id"
     t.string "description"
-    t.index ["user_id"], name: "index_projects_on_user_id"
+    t.index ["users_id"], name: "index_projects_on_users_id"
   end
 
   create_table "tasks", force: :cascade do |t|
