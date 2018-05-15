@@ -1,5 +1,6 @@
 <p><%=@user.name%></p>
 <div class="col-md-8">
+  <%= link_to "New Project", project_path %>
   <% if @user.projects.any? %>
     <h3> Currently working on (<%= @user.projects.count %>) projects </h3>
     <ul class="microposts">
