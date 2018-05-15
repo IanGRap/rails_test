@@ -3,7 +3,7 @@
   <%= link_to "New Project", project_path %>
   <% if @user.projects.any? %>
     <h3> Currently working on (<%= @user.projects.count %>) projects </h3>
-    <ul class="microposts">
+    <ul class="projects">
       <%= render @projects %>
     </ul>
   <% else %>
