@@ -1,2 +1,12 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+<h3>New Project</h3>
+
+<%= form_for(@project, url: signup_path) do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'form-control' %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description, class: 'form-control' %>
+
+  <%= f.submit 'create project', class: "btn btn-primary" %>
+<% end %>
