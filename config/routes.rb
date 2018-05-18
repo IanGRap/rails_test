@@ -15,9 +15,13 @@ Rails.application.routes.draw do
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
+  delete '/logout', to: 'session#destroy'
 
   get '/project', to: 'projects#new'
   post '/project', to: 'projects#create'
+
+  get '/task', to: 'tasks#new'
+  post '/task', to: 'tasks#create'
 
   resources :users
   resources :projects

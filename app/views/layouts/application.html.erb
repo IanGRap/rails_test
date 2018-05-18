@@ -9,7 +9,10 @@
   </head>
 
   <body>
-    <p>logged in: <%= @current_user.nil? %></p>
+    <% if logged_in? %>
+    <p>This</p>
+    <%= link_to "Logout", logout_path %>>
+    <% end %>
     <%= yield %>
     <%= debug(params) if Rails.env.development? %>
   </body>

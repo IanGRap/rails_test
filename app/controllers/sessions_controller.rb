@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   include SessionsHelper
 
   def new
-    if logged_in
+    if logged_in?
       redirect_to current_user
     end
   end
@@ -16,4 +16,12 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
+
+  def destroy
+    if logged_in
+      log_out
+    end
+    redirect_to root_url
+  end
+
 end
