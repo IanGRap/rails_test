@@ -1,0 +1,12 @@
+<p><%=@project.name%></p>
+<div class="col-md-8">
+  <%= link_to "New Task", # %>
+  <% if @project.tasks.any? %>
+    <h3> Currently working on (<%= @project.tasks.count %>) tasks </h3>
+    <ul class="tasks">
+      <%= render @tasks %>
+    </ul>
+  <% else %>
+    <h3> This project currently has no tasks </h3>
+  <% end %>
+</div>
