@@ -8,6 +8,7 @@ class ProjectsController < ApplicationController
 
   def show
     set_current_project(params[:format])
+    @project = Project.find(params[:format])
   end
 
   def create
