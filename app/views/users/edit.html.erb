@@ -1,0 +1,9 @@
+<h1>Change User Name</h1>
+
+<%= form_for(@user) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+
+  <%= f.submit 'edit', class: "btn btn-primary" %>
+<% end %>

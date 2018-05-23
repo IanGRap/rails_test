@@ -14,10 +14,14 @@ class ProjectsController < ApplicationController
   def create
     @project = current_user.projects.build(project_params)
     if @project.save
-      redirect_to current_user
+      redirect_to @project
     else
       render 'new'
     end
+  end
+
+  def edit
+    @project = current_project
   end
 
   private
