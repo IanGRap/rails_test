@@ -1,4 +1,5 @@
-<li id="task-<%= task.id %>">
-  <h3 class="task_name">Task: <%= task.title %></h3>
-  <span class="task_description">Description: <%= task.description %></span>
+<li id="task_list">
+  <h3 class="task_name"><%= task.name %></h3>
+  <span class="task_description"><%= task.description %></span>
+  <%= link_to "view", task %>
 </li>

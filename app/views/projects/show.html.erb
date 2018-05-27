@@ -1,8 +1,11 @@
-<p><%=@project.name%></p>
+<h1><%= @project.title %></h1>
+<h3><%= @project.description %></h3>
+<%= link_to "Back to Profile", @user %>
+<%= link_to "Edit Project", edit_project_path %>
 <div class="col-md-8">
-  <%= link_to "New Task", # %>
+  <%= link_to "New Task", new_task_path(project_id: params[:id]) %>
   <% if @project.tasks.any? %>
-    <h3> Currently working on (<%= @project.tasks.count %>) tasks </h3>
+    <h3> There are currently <%= @project.tasks.count %> tasks </h3>
     <ul class="tasks">
       <%= render @tasks %>
     </ul>

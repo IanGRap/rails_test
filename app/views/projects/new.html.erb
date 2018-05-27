@@ -1,6 +1,6 @@
 <h3>New Project</h3>
 
-<%= form_for(@project) do |f| %>
+<%= form_for(@project, url: new_project_path(user_id: params[:user_id])) do |f| %>
 
   <%= f.label :title %>
   <%= f.text_field :title, class: 'form-control' %>

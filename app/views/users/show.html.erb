@@ -1,8 +1,8 @@
 <p><%=@user.name%></p>
 <div class="col-md-8">
-  <%= link_to "New Project", project_path %>
+  <%= link_to "New Project", new_project_path(user_id: params[:id]) %>
   <% if @user.projects.any? %>
-    <h3> Currently working on (<%= @user.projects.count %>) projects </h3>
+    <h3> Currently working on <%= @user.projects.count %> projects </h3>
     <ul class="projects">
       <%= render @projects %>
     </ul>

@@ -7,12 +7,14 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    set_current_project(params[:format])
-    @project = Project.find(params[:format])
+    @project = Project.find(params[:id])
+    @user = User.find(@project.user_id)
+    @tasks = @project.tasks
   end
 
   def create
-    @project = current_user.projects.build(project_params)
+    @user = User.find(params[:user_id])
+    @project = @user.projects.build(project_params)
     if @project.save
       redirect_to @project
     else
@@ -21,7 +23,16 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    @project = current_project
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    if @project.update_attributes(project_params)
+      redirect_to @project
+    else
+      render 'edit'
+    end
   end
 
   private
