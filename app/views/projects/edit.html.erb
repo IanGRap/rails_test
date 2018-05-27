@@ -11,4 +11,7 @@
   <%= f.text_field :description, class: 'form-control' %>
 
   <%= f.submit 'update project', class: "btn btn-primary" %>
+
 <% end %>
+
+<%= link_to "Delete Project", @project, method: :delete %>
