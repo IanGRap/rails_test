@@ -1,6 +1,6 @@
-<h1>Sign up</h1>
+<h1>Log in</h1>
 
-<%= form_for(@user, url: new_user_path) do |f| %>
+<%= form_for(@user, url: login_user_path) do |f| %>
 
   <%= f.label :name %>
   <%= f.text_field :name, class: 'form-control' %>
@@ -14,4 +14,4 @@
   <%= f.submit 'sign up', class: "btn btn-primary" %>
 <% end %>
 
-<%= link_to "Log in", login_user_path %>
+<%= link_to "Sign up", new_user_path %>

@@ -3,6 +3,19 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def login_page
+    @user = User.new
+  end
+
+  def login
+    user = User.find_by(name: params[:user][:name])
+    if user && user.authenticate(params[:user][:password])
+      redirect_to user
+    else
+      render 'login_page'
+    end
+  end
+
   def show
     @user = User.find(params[:id])
     @projects = @user.projects
