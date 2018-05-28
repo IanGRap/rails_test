@@ -1,9 +1,13 @@
+<div class = "show_project">
+
 <h1><%= @project.title %></h1>
 <h3><%= @project.description %></h3>
+
 <%= link_to "Back to Profile", @user %>
 <%= link_to "Edit Project", edit_project_path %>
+<%= link_to "New Task", new_task_path(project_id: params[:id]) %>
+
 <div class="col-md-8">
-  <%= link_to "New Task", new_task_path(project_id: params[:id]) %>
   <% if @project.tasks.any? %>
     <h3> There are currently <%= @project.tasks.count %> tasks </h3>
     <ul class="tasks">
@@ -13,4 +17,6 @@
     <h3> This project currently has no tasks </h3>
   <% end %>
   <% link_to "Edit Project Details", edit_project_path %>
+</div>
+
 </div>

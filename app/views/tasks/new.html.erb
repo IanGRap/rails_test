@@ -1,3 +1,5 @@
+<div class = "new_task">
+
 <h3>New Task</h3>
 
 <%= form_for(@task, url: new_task_path(project_id: params[:project_id]) ) do |f| %>
@@ -9,4 +11,7 @@
   <%= f.text_field :description, class: 'form-control' %>
 
   <%= f.submit 'create task', class: "btn btn-primary" %>
+
 <% end %>
+
+</div>

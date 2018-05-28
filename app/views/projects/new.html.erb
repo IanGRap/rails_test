@@ -1,3 +1,5 @@
+<div class = "new_project">
+
 <h3>New Project</h3>
 
 <%= form_for(@project, url: new_project_path(user_id: params[:user_id])) do |f| %>
@@ -9,4 +11,7 @@
   <%= f.text_field :description, class: 'form-control' %>
 
   <%= f.submit 'create project', class: "btn btn-primary" %>
+
 <% end %>
+
+</div>

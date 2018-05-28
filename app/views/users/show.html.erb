@@ -1,6 +1,11 @@
-<p><%=@user.name%></p>
+<div class = "show_user">
+
+<h1><%=@user.name%></h1>
+
+<%= link_to "New Project", new_project_path(user_id: params[:id]) %>
+<%= link_to "Update Profile", edit_user_path %>
+
 <div class="col-md-8">
-  <%= link_to "New Project", new_project_path(user_id: params[:id]) %>
   <% if @user.projects.any? %>
     <h3> Currently working on <%= @user.projects.count %> projects </h3>
     <ul class="projects">
@@ -9,5 +14,6 @@
   <% else %>
     <h3> Currently not working on any projects </h3>
   <% end %>
-  <%= link_to "Update Profile", edit_user_path %>
+</div>
+
 </div>
