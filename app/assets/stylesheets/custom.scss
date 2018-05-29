@@ -1,0 +1,91 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$navy: #003049;
+$citrus: #D62828;
+$mango: #F77F00;
+$golden: #FCBF49;
+$mint: #EAE2B7;
+
+body {
+  padding: 60px;
+  padding-top: 30px;
+  font-family: 'Sunflower';
+  background-color: $navy;
+  color: $mango;
+}
+
+label {
+  padding: 5px;
+  margin-top: 5px;
+}
+
+a {
+  background-color: $golden;
+  padding: 3px;
+  color: $navy;
+  border-radius: 5px;
+
+  &:hover{
+    text-decoration: none;
+    background-color: $mango;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.btn{
+  margin: 15px;
+  background-color: $golden;
+
+  &:hover{
+    background-color: $mango;
+  }
+}
+
+.delete-btn{
+  background-color: $citrus;
+
+  &:hover{
+    background-color: $mint;
+  }
+}
+
+.show{
+  h2{
+    padding: 10px;
+    color: $mint;
+  }
+}
+
+.edit{
+  h3{
+    margin-bottom: 20px;
+  }
+}
+
+.login_user{
+  float: center;
+}
+
+.name-link{
+  font-size: 24px;
+  background-color: $navy;
+  color: $golden;
+
+  &:hover{
+    background-color: $navy;
+    color: $citrus;
+  }
+}
+
+.row{
+  margin: 7px;
+}
+
+.form-control{
+  padding: 5px;
+  background-color: $mint;
+}

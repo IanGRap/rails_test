@@ -1,17 +1,29 @@
 <div class = "new_project">
 
-<h3>New Project</h3>
+  <h3>New Project</h3>
 
-<%= form_for(@project, url: new_project_path(user_id: params[:user_id])) do |f| %>
+  <div class = "row">
+    <div class="col-md-4">
 
-  <%= f.label :title %>
-  <%= f.text_field :title, class: 'form-control' %>
+      <%= form_for(@project, url: new_project_path(user_id: params[:user_id])) do |f| %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description, class: 'form-control' %>
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control' %>
 
-  <%= f.submit 'create project', class: "btn btn-primary" %>
+        <%= f.label :description %>
+        <%= f.text_field :description, class: 'form-control' %>
 
-<% end %>
+        <%= f.submit 'create project', class: "btn btn-primary" %>
+
+      <% end %>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <%= link_to "Back to Profile", @user %>
+    </div>
+  </div>
 
 </div>

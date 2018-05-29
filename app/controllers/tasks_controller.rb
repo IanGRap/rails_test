@@ -2,6 +2,7 @@ class TasksController < ApplicationController
   include ApplicationHelper
 
   def new
+    @project = Project.find(params[:project_id])
     @task = Task.new
   end
 

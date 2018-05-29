@@ -2,16 +2,28 @@
 
 <h3>New Task</h3>
 
-<%= form_for(@task, url: new_task_path(project_id: params[:project_id]) ) do |f| %>
+  <div class = "row">
+    <div class="col-md-4">
 
-  <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control' %>
+      <%= form_for(@task, url: new_task_path(project_id: params[:project_id])) do |f| %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description, class: 'form-control' %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
 
-  <%= f.submit 'create task', class: "btn btn-primary" %>
+        <%= f.label :description %>
+        <%= f.text_field :description, class: 'form-control' %>
 
-<% end %>
+        <%= f.submit 'create task', class: "btn btn-primary" %>
+
+      <% end %>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <%= link_to "Back to Project", @project %>
+    </div>
+  </div>
 
 </div>

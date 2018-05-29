@@ -1,5 +1,8 @@
-<li id="task_list">
-  <h3 class="task_name"><%= task.name %></h3>
-  <span class="task_description"><%= task.description %></span>
-  <%= link_to "view", task %>
+<li id="element">
+  <div class = "row">
+    <%= link_to task.name, task, class: "name-link" %>
+  </div>
+  <div class = "row">
+    <span class="description"><%= task.description %></span>
+  </div>
 </li>

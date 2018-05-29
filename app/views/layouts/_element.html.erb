@@ -1,0 +1,8 @@
+<li id="element_list">
+  <div class = "row">
+    <%= link_to yield(:element_title), yield(:link), class: "name-link" %>
+  </div>
+  <div class = "row">
+    <span class="description"><%= yield(:element_description) %></span>
+  </div>
+</li>

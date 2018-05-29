@@ -1,21 +1,21 @@
-<div class = "edit_project">
+<div class = "edit">
 
-<h3>Edit Project</h3>
+  <h3>Edit Project</h3>
 
-<%= link_to "Back to Project", @project %>
+  <%= link_to "Back to Project", @project %>
 
-<%= form_for(@project) do |f| %>
+  <%= form_for(@project) do |f| %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title, class: 'form-control' %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description, class: 'form-control' %>
+    <%= f.label :description %>
+    <%= f.text_field :description, class: 'form-control' %>
 
-  <%= f.submit 'update project', class: "btn btn-primary" %>
+    <%= f.submit 'update project', class: "btn btn-primary" %>
 
-<% end %>
+  <% end %>
 
-<%= link_to "Delete Project", @project, method: :delete %>
+  <%= link_to "Delete Project", @project, method: :delete, class: "delete-btn" %>
 
 </div>

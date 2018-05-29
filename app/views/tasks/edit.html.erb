@@ -1,21 +1,21 @@
-<div class = "edit_task">
+<div class = "edit">
 
-<h3>Edit Task</h3>
+  <h3>Edit Task</h3>
 
-<%= link_to "Back to task", @task %>
+  <%= link_to "Back to task", @task %>
 
-<%= form_for(@task) do |f| %>
+  <%= form_for(@task) do |f| %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control' %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description, class: 'form-control' %>
+    <%= f.label :description %>
+    <%= f.text_field :description, class: 'form-control' %>
 
-<%= f.submit 'update task', class: "btn btn-primary" %>
+  <%= f.submit 'update task', class: "btn btn-primary" %>
 
-<% end %>
+  <% end %>
 
-<%= link_to "Delete Task", @task, method: :delete %>
+  <%= link_to "Delete Task", @task, method: :delete, class: "delete-btn" %>
 
 </div>

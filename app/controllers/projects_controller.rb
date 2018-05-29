@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
   include ApplicationHelper
 
   def new
+    @user = User.find(params[:user_id])
     @project = Project.new
   end
 

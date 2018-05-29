@@ -1,5 +1,11 @@
-<li id="project_list">
-  <h3 class="project_name"><%= project.title %></h3>
-  <span class="project_description"><%= project.description %></span>
-  <%= link_to "View", project %>
+<% provide(:element_title, project.title) %>
+<% provide(:element_description, project.description) %>
+<% provide(:link, project) %>
+<li id="element">
+  <div class = "row">
+    <%= link_to project.title, project, class: "name-link" %>
+  </div>
+  <div class = "row">
+    <span class="description"><%= project.description %></span>
+  </div>
 </li>

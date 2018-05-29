@@ -1,17 +1,31 @@
-<div class = "edit_user">
+<div class = "edit">
 
-<h1>Change User Name</h1>
+  <div class = "row">
+    <h3>Change User Name</h3>
+  </div>
 
-<%= link_to "Back to Profile", @user %>
+  <div class="row">
+    <div class="col-md-2">
+      <%= link_to "Back to Profile", @user %>
+    </div>
+  </div>
 
-<%= form_for(@user) do |f| %>
+  <div class = "row">
+    <div class = "col-md-4">
+      <%= form_for(@user) do |f| %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control' %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
 
-  <%= f.submit 'edit', class: "btn btn-primary" %>
-<% end %>
+        <%= f.submit 'edit', class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
 
-<%= link_to "Delete Profile", @user, method: :delete %>
+  <div class="row">
+    <div class="col-md-2">
+      <%= link_to "Delete Profile", @user, method: :delete, class: "delete-btn" %>
+    </div>
+  </div>
 
 </div>
