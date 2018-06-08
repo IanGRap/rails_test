@@ -7,6 +7,15 @@ $mango: #F77F00;
 $golden: #FCBF49;
 $mint: #EAE2B7;
 
+page_title {
+  background-color: $mint;
+
+  h1{
+    float: center;
+    color: $golden;
+  }
+}
+
 body {
   padding: 60px;
   padding-top: 30px;
