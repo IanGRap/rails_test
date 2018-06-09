@@ -1,21 +1,40 @@
-<div class = "edit">
+<% provide(:title, 'Update Project') %>
 
-  <h3>Edit Project</h3>
+<div class = "nav">
+  <div class="row">
+    <div class="col-md-offset-1">
+      <%= link_to "Back to Project", @project%>
+    </div>
+  </div>
+</div>
 
-  <%= link_to "Back to Project", @project %>
+<div class = "row">
+  <div class = 'col-md-offset-3 sub_title''>
+    <span> Enter your new info </span>
+  </div>
+</div>
 
-  <%= form_for(@project) do |f| %>
+<div class = "row">
 
-    <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control' %>
+  <div class = "col-md-1 col-md-offset-3">
+    <div class = 'sidebar'>
+      <%= link_to "Delete Project", @project, method: :delete, class: "btn delete" %>
+    </div>
+  </div>
 
-    <%= f.label :description %>
-    <%= f.text_field :description, class: 'form-control' %>
+  <div class = 'col-md-4'>
 
-    <%= f.submit 'update project', class: "btn btn-primary" %>
+      <%= form_for(@project) do |f| %>
 
-  <% end %>
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control' %>
 
-  <%= link_to "Delete Project", @project, method: :delete, class: "delete-btn" %>
+        <%= f.label :description %>
+        <%= f.text_field :description, class: 'form-control' %>
+
+        <%= f.submit 'update project', class: "btn btn-primary" %>
+
+      <% end %>
+  </div>
 
 </div>

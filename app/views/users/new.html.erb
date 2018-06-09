@@ -1,9 +1,16 @@
+<% provide(:title, 'Sign Up') %>
 <div class = "new_user">
 
-  <h1>Sign up</h1>
+  <div class = "nav">
+    <div class="row">
+      <div class="col-md-offset-1">
+        <%= link_to "Log in", login_user_path%>
+      </div>
+    </div>
+  </div>
 
   <div class = "row">
-    <div class="col-md-4">
+    <div class= "col-md-6 col-md-offset-3">
       <%= form_for(@user, url: new_user_path) do |f| %>
 
         <%= f.label :name %>
@@ -15,14 +22,8 @@
         <%= f.label :password_confirmation, "Confirmation" %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-        <%= f.submit 'sign up', class: "btn btn-primary" %>
+        <%= f.submit 'sign up', class: "btn" %>
       <% end %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-2">
-      <%= link_to "Log in", login_user_path %>
     </div>
   </div>
 

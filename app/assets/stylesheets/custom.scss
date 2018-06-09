@@ -7,94 +7,144 @@ $mango: #F77F00;
 $golden: #FCBF49;
 $mint: #EAE2B7;
 
-page_title {
-  background-color: $mint;
-
-  h1{
-    float: center;
-    color: $golden;
-  }
-}
+$dark_purp: #6F58C9;
+$light_purp: #7E78D2;
+$lavender: #B6B8D6;
+$lime: #BDEDE0;
+$pink: #F5E6E8;
+$white: #FFFFFF;
+$black: #000000;
 
 body {
-  padding: 60px;
-  padding-top: 30px;
+  padding: 0px;
   font-family: 'Sunflower';
-  background-color: $navy;
-  color: $mango;
+  background-color: $lavender;
+  color: $light_purp;
 }
 
 label {
   padding: 5px;
   margin-top: 5px;
-}
-
-a {
-  background-color: $golden;
-  padding: 3px;
-  color: $navy;
-  border-radius: 5px;
-
-  &:hover{
-    text-decoration: none;
-    background-color: $mango;
-  }
+  text-align: center;
 }
 
 li {
   list-style: none;
 }
 
-.btn{
-  margin: 15px;
-  background-color: $golden;
+a{
 
   &:hover{
-    background-color: $mango;
+    text-decoration: none;
   }
 }
 
-.delete-btn{
-  background-color: $citrus;
+.page_title {
+  margin: 0px;
+  padding: 20px;
 
-  &:hover{
-    background-color: $mint;
-  }
-}
-
-.show{
-  h2{
-    padding: 10px;
-    color: $mint;
-  }
-}
-
-.edit{
-  h3{
+  h1{
+    font-size: 50px;
+    color: $dark_purp;
     margin-bottom: 20px;
   }
 }
 
-.login_user{
-  float: center;
+.nav {
+  background-color: $lime;
+  padding: 15px 0px 10px 0px;
+  margin-bottom: 25px;
+
+  a{
+    padding: 7px;
+    color: $light_purp;
+    border-radius: 10px;
+    margin: 10px;
+
+    &:hover{
+      text-decoration: none;
+      color: $pink;
+    }
+  }
+
 }
 
-.name-link{
-  font-size: 24px;
-  background-color: $navy;
-  color: $golden;
+.sub_title {
+  color: $dark_purp;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.btn{
+  padding: 7px;
+  color: $light_purp;
+  border-radius: 10px;
+  background-color: $pink;
+  margin: 10px;
 
   &:hover{
-    background-color: $navy;
-    color: $citrus;
+    text-decoration: none;
+    color: $lavender;
+    background-color: $dark_purp;
   }
 }
 
-.row{
-  margin: 7px;
+.delete{
+  background-color: $citrus;
+  color: $white;
+
+  &:hover{
+    color: $black;
+    background-color: $citrus;
+  }
+}
+
+.form{
+  margin: 5px 200px;
 }
 
 .form-control{
   padding: 5px;
-  background-color: $mint;
+  background-color: $pink;
+  color: $dark_purp;
 }
+
+.submit{
+  margin-top: 10px;
+  padding: 5px;
+  background-color: pink
+}
+
+.element-title{
+  background-color: $light_purp;
+  margin: 0px;
+  text-align: center;
+  padding: 0px 20px;
+  font-size: 25px;
+
+  a{
+    color: $lavender;
+
+    &:hover{
+      color: $lime;
+    }
+
+  }
+
+}
+
+.element-description{
+  background-color: $lime;
+  margin: 0px;
+  padding: 5px;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.debug{
+  margin-top: 25px;
+}
+
+
+
+

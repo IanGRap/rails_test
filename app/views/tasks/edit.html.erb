@@ -1,21 +1,42 @@
-<div class = "edit">
+<% provide(:title, 'Update Task') %>
 
-  <h3>Edit Task</h3>
+<div class = "nav">
+  <div class="row">
+    <div class="col-md-offset-1">
+      <%= link_to "Back to Task", @task%>
+    </div>
+  </div>
+</div>
 
-  <%= link_to "Back to task", @task %>
+<div class = "row">
+  <div class = 'col-md-offset-3 sub_title''>
+    <span> Enter your new info </span>
+  </div>
+</div>
 
-  <%= form_for(@task) do |f| %>
+<div class = "row">
 
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
+  <div class = "col-md-1 col-md-offset-3">
+    <div class = 'sidebar'>
+      <%= link_to "Delete Project", @task, method: :delete, class: "btn delete" %>
+    </div>
+  </div>
 
-    <%= f.label :description %>
-    <%= f.text_field :description, class: 'form-control' %>
+  <div class = 'col-md-4'>
+    <%= link_to "Back to task", @task %>
 
-  <%= f.submit 'update task', class: "btn btn-primary" %>
+      <%= form_for(@task) do |f| %>
 
-  <% end %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
 
-  <%= link_to "Delete Task", @task, method: :delete, class: "delete-btn" %>
+        <%= f.label :description %>
+        <%= f.text_field :description, class: 'form-control' %>
+
+      <%= f.submit 'update task', class: "btn btn-primary" %>
+
+      <% end %>
+
+  </div>
 
 </div>

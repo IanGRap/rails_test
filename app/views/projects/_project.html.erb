@@ -1,11 +1,14 @@
 <% provide(:element_title, project.title) %>
 <% provide(:element_description, project.description) %>
 <% provide(:link, project) %>
-<li id="element">
-  <div class = "row">
-    <%= link_to project.title, project, class: "name-link" %>
-  </div>
-  <div class = "row">
-    <span class="description"><%= project.description %></span>
-  </div>
+<li class = 'row'>
+	<div class=' col-md-6'>
+		<div class = 'row element-title'>
+			<%= link_to project.title, project %>
+		</div>
+		<div class = 'row element-description'>
+			<span><%= project.description %></span><br>
+			<span>Currently <%=project.tasks.count%> tasks</span>
+		</div>
+	</div>
 </li>

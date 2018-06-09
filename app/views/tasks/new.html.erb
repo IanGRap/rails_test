@@ -1,11 +1,18 @@
-<div class = "new_task">
+<% provide(:title, 'New Task') %>
 
-<h3>New Task</h3>
+<div class = "nav">
+  <div class="row">
+    <div class="col-md-offset-1">
+      <%= link_to 'Back to Project', @project%>
+    </div>
+  </div>
+</div>
 
-  <div class = "row">
-    <div class="col-md-4">
+<div class = "row">
 
-      <%= form_for(@task, url: new_task_path(project_id: params[:project_id])) do |f| %>
+  <div class= "col-md-6 col-md-offset-3">
+
+    <%= form_for(@task, url: new_task_path(project_id: params[:project_id])) do |f| %>
 
         <%= f.label :name %>
         <%= f.text_field :name, class: 'form-control' %>
@@ -17,13 +24,6 @@
 
       <% end %>
 
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-2">
-      <%= link_to "Back to Project", @project %>
-    </div>
   </div>
 
 </div>

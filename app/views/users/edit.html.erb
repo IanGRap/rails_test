@@ -1,31 +1,36 @@
-<div class = "edit">
+<% provide(:title, 'Update Profile') %>
 
-  <div class = "row">
-    <h3>Change User Name</h3>
-  </div>
-
+<div class = "nav">
   <div class="row">
-    <div class="col-md-2">
-      <%= link_to "Back to Profile", @user %>
+    <div class="col-md-offset-1">
+      <%= link_to "Back to Profile", @user%>
+    </div>
+  </div>
+</div>
+
+<div class = "row">
+  <div class = 'col-md-offset-3 sub_title''>
+    <span> Enter your new info </span>
+  </div>
+</div>
+
+<div class = "row">
+
+  <div class = "col-md-1 col-md-offset-3">
+    <div class = 'sidebar'>
+      <%= link_to "Delete Profile", @user, method: :delete, class: "btn delete" %>
     </div>
   </div>
 
-  <div class = "row">
-    <div class = "col-md-4">
-      <%= form_for(@user) do |f| %>
+  <div class = 'col-md-4'>
+    <%= form_for(@user) do |f| %>
 
-        <%= f.label :name %>
-        <%= f.text_field :name, class: 'form-control' %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
 
-        <%= f.submit 'edit', class: "btn btn-primary" %>
-      <% end %>
-    </div>
-  </div>
+      <%= f.submit 'edit', class: "btn" %>
 
-  <div class="row">
-    <div class="col-md-2">
-      <%= link_to "Delete Profile", @user, method: :delete, class: "delete-btn" %>
-    </div>
+    <% end %>
   </div>
 
 </div>

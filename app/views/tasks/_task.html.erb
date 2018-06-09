@@ -1,8 +1,10 @@
-<li id="element">
-  <div class = "row">
-    <%= link_to task.name, task, class: "name-link" %>
-  </div>
-  <div class = "row">
-    <span class="description"><%= task.description %></span>
-  </div>
+<li class = 'row'>
+	<div class=' col-md-6'>
+		<div class = 'row element-title'>
+			<%= link_to task.name, task %>
+		</div>
+		<div class = 'row element-description'>
+			<span><%= task.description %></span>
+		</div>
+	</div>
 </li>
